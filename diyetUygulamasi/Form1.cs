@@ -1,4 +1,5 @@
-﻿using diyetUygulamasi.entities;
+﻿using diyetUygulamasi.database;
+using diyetUygulamasi.entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,9 +21,12 @@ namespace diyetUygulamasi
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            diyetisyen d = new diyetisyen();
+            admin a = new admin();
+            a.kisiEkle(new diyetisyen("12375965214", "ugur", "ongun","ugur","123"));
 
-            d.hastaEkle(new hasta("12375965214", "ugur", "ongun"));
+            diyetisyen diyetisyen = db.diyetsiyenler.Where(x => x.kullaniciAdi == "ugur").FirstOrDefault();
+
+            diyetisyen.kisiEkle(new hasta("54896312458", "okan", "erciyas"));
         }
     }
 }

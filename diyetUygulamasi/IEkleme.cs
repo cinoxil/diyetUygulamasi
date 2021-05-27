@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace diyetUygulamasi.database
+namespace diyetUygulamasi
 {
-    public static class db
+    public interface IEkleme
     {
-        public static List<diyetisyen> diyetsiyenler;
+        void kisiEkle(kisi kisi);
     }
 }
