@@ -9,6 +9,9 @@ namespace diyetUygulamasi.database
 {
     public static class db
     {
-        public static List<diyetisyen> diyetsiyenler;
+        
+        public static diyetisyen gecerliKullanici = db.diyetsiyenler.Where(x => x.kullaniciAdi == "ugur").FirstOrDefault();
+
+        public static List<diyetisyen> diyetsiyenler = new List<diyetisyen>();
     }
 }

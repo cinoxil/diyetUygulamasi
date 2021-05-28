@@ -7,23 +7,21 @@ using System.Threading.Tasks;
 
 namespace diyetUygulamasi.entities
 {
-    public class admin : IEkleme
+    public class admin : kisi, IEkleme
     {
         public string kullaniciAdi { get; set; }
         public string sifre { get; set; }
 
+        public admin() 
+        {
+            isAdmin = true;
+        }
 
         public void kisiEkle(kisi kisi)
         {
-            if (db.diyetsiyenler != null)
-            {
-                db.diyetsiyenler.Add((diyetisyen)kisi);
-            }
-            else
-            {
-                db.diyetsiyenler = new List<diyetisyen>();
-                db.diyetsiyenler.Add((diyetisyen)kisi);
-            }
+            db.diyetsiyenler.Add((diyetisyen)kisi);
         }
+            
+            
     }
 }

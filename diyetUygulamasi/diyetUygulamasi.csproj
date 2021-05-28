@@ -50,7 +50,9 @@
     <Compile Include="entities\admin.cs" />
     <Compile Include="entities\diyet.cs" />
     <Compile Include="entities\diyetisyen.cs" />
+    <Compile Include="entities\diyetisyenFacade.cs" />
     <Compile Include="entities\hasta.cs" />
+    <Compile Include="entities\hastaKayitKontrol.cs" />
     <Compile Include="entities\hastalik.cs" />
     <Compile Include="entities\kisi.cs" />
     <Compile Include="Form1.cs">

@@ -16,6 +16,7 @@ namespace diyetUygulamasi.entities
             tc = _tc;
             ad = _ad;
             soyad = _soyad;
+            isAdmin = false;
         }
 
 

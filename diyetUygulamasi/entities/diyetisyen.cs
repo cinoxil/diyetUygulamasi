@@ -20,6 +20,7 @@ namespace diyetUygulamasi.entities
             soyad = _soyad;
             kullaniciAdi = _id;
             sifre = _sifre;
+            isAdmin = false;
         }
 
         public void kisiEkle(kisi kisi)

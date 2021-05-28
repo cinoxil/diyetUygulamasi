@@ -12,7 +12,7 @@ namespace diyetUygulamasi.entities
         private string _tc { get; set; }
         public string ad { get; set; }
         public string soyad { get; set; }
-
+        public bool isAdmin { get; set; }
 
         public string tc
         {

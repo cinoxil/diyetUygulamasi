@@ -24,9 +24,9 @@ namespace diyetUygulamasi
             admin a = new admin();
             a.kisiEkle(new diyetisyen("12375965214", "ugur", "ongun","ugur","123"));
 
-            diyetisyen diyetisyen = db.diyetsiyenler.Where(x => x.kullaniciAdi == "ugur").FirstOrDefault();
+            hasta hasta = new hasta("54896312458", "okan", "erciyas");
 
-            diyetisyen.kisiEkle(new hasta("54896312458", "okan", "erciyas"));
+            diyetisyenFacade.hastaEkle(hasta);
         }
     }
 }
