@@ -12,16 +12,21 @@ namespace diyetUygulamasi.entities
         public string kullaniciAdi { get; set; }
         public string sifre { get; set; }
 
-        public admin() 
+        public admin(string _tc, string _ad, string _soyad, string _id, string _sifre) 
         {
+            tc = _tc;
+            ad = _ad;
+            soyad = _soyad;
+            kullaniciAdi = _id;
+            sifre = _sifre;
             isAdmin = true;
         }
 
         public void kisiEkle(kisi kisi)
         {
-            db.diyetsiyenler.Add((diyetisyen)kisi);
-        }
+            db.diyetisyenler.Add((diyetisyen)kisi);
             
+        }
             
     }
 }

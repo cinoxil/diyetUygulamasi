@@ -11,9 +11,10 @@ namespace diyetUygulamasi.entities
     {
         public static void hastaEkle(hasta hasta)
         {
-            if (hastaKayitKontrol.isHastaKayitli(hasta))
+            if (!hastaKayitKontrol.isHastaKayitli(hasta))
             {
-                db.gecerliKullanici.kisiEkle(hasta);
+                diyetisyen gecerliKullanici = db.diyetisyenler.Where(x => x.kullaniciAdi == "ugur").FirstOrDefault();
+                gecerliKullanici.kisiEkle(hasta);
             }
         }
             

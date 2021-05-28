@@ -21,19 +21,15 @@ namespace diyetUygulamasi.entities
             kullaniciAdi = _id;
             sifre = _sifre;
             isAdmin = false;
+            hastalar = new List<hasta>();
         }
 
         public void kisiEkle(kisi kisi)
         {
-            if (hastalar != null)
-            {
-                hastalar.Add((hasta)kisi);
-            }
-            else
-            {
-                hastalar = new List<hasta>();
-                hastalar.Add((hasta)kisi);
-            }
+            
+            hastalar.Add((hasta)kisi);
         }
+            
+            
     }
 }

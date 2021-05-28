@@ -13,7 +13,7 @@ namespace diyetUygulamasi.entities
         {
             
             hasta bulunanHasta = null;
-            foreach (diyetisyen item in db.diyetsiyenler)
+            foreach (diyetisyen item in db.diyetisyenler)
             {
                 bulunanHasta = item.hastalar.Where(x => x.tc == hasta.tc).FirstOrDefault();
             }
