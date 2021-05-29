@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace diyetUygulamasi
 {
-    public partial class urunlerim : Form
+    public partial class diyetEkle : Form
     {
-        public urunlerim()
+        public diyetEkle()
         {
             InitializeComponent();
         }

@@ -1,7 +1,7 @@
 ﻿
 namespace diyetUygulamasi
 {
-    partial class urunEkle
+    partial class hastaEkle
     {
         /// <summary>
         /// Required designer variable.

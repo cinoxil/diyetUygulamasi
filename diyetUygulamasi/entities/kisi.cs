@@ -86,8 +86,7 @@ namespace diyetUygulamasi.entities
                         {
                             MessageBox.Show("Merhaba " + diyetisyenTemp.kullaniciAdi);
                             frmKullaniciGiris.Close(); //Fonsiyona gelen geçerli giriş yapma formunu kapatıyor.
-                            db.gecerliKullanici =
-                                diyetisyenTemp.kullaniciAdi; //Geçerli kullanıcıya adminTempdeki idyi gönderir.
+                            db.gecerliKullanici = diyetisyenTemp.kullaniciAdi; //Geçerli kullanıcıya adminTempdeki idyi gönderir.
                             panelIslemleri.kullaniciyaEkraniGoster(diyetisyenTemp.isAdmin); /*Kullanıcı tipine göre gerekli ekranlari
                                                                                                             ayarlar.*/
                         }

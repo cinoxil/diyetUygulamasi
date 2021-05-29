@@ -49,7 +49,7 @@ namespace diyetUygulamasi
 
         private void btnHastaEkle_Click(object sender, EventArgs e)
         {
-            var frmEkle = new urunEkle();
+            var frmEkle = new hastaEkle();
             frmEkle.MdiParent = this; //Form1i frmEkle formunun MdiParrentı olarak belirliyor.
             frmEkle.StartPosition = FormStartPosition.Manual;
             frmEkle.Location = new Point(330, 120);
@@ -59,7 +59,7 @@ namespace diyetUygulamasi
 
         private void btnHastaIslemleri_Click(object sender, EventArgs e)
         {
-            var paraEkle = new paraEkle();
+            var paraEkle = new hastaIslemleri();
             paraEkle.MdiParent = this; //Form1i paraEkle formunun MdiParrentı olarak belirliyor.
             paraEkle.StartPosition = FormStartPosition.Manual;
             paraEkle.Location = new Point(300, 160);
@@ -69,7 +69,7 @@ namespace diyetUygulamasi
 
         private void btnHastalikEkle_Click(object sender, EventArgs e)
         {
-            var satinAl = new satinAl();
+            var satinAl = new hastalikEkle();
             satinAl.MdiParent = this; //Form1i satinAl formunun MdiParrentı olarak belirliyor.
             satinAl.StartPosition = FormStartPosition.Manual;
             satinAl.Location = new Point(125, 80);
@@ -79,7 +79,7 @@ namespace diyetUygulamasi
 
         private void btnDiyetEkle_Click(object sender, EventArgs e)
         {
-            var urunlerim = new urunlerim();
+            var urunlerim = new diyetEkle();
             urunlerim.MdiParent = this; //Form1i urunlerim formunun MdiParrentı olarak belirliyor.
             urunlerim.StartPosition = FormStartPosition.Manual;
             urunlerim.Location = new Point(275, 75);

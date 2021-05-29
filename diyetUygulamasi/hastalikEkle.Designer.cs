@@ -1,7 +1,7 @@
 ﻿
 namespace diyetUygulamasi
 {
-    partial class urunlerim
+    partial class hastalikEkle
     {
         /// <summary>
         /// Required designer variable.
@@ -29,35 +29,39 @@ namespace diyetUygulamasi
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgUrunlerim = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgUrunlerim)).BeginInit();
+            this.dgPazar = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPazar)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgUrunlerim
+            // dgPazar
             // 
-            this.dgUrunlerim.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgUrunlerim.Location = new System.Drawing.Point(12, 12);
-            this.dgUrunlerim.Name = "dgUrunlerim";
-            this.dgUrunlerim.Size = new System.Drawing.Size(345, 278);
-            this.dgUrunlerim.TabIndex = 0;
+            this.dgPazar.AllowUserToAddRows = false;
+            this.dgPazar.AllowUserToDeleteRows = false;
+            this.dgPazar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgPazar.Location = new System.Drawing.Point(12, 12);
+            this.dgPazar.Name = "dgPazar";
+            this.dgPazar.ReadOnly = true;
+            this.dgPazar.RowHeadersWidth = 51;
+            this.dgPazar.Size = new System.Drawing.Size(646, 215);
+            this.dgPazar.TabIndex = 0;
             // 
-            // urunlerim
+            // satinAl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(368, 303);
-            this.Controls.Add(this.dgUrunlerim);
+            this.ClientSize = new System.Drawing.Size(669, 283);
+            this.Controls.Add(this.dgPazar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "urunlerim";
-            this.Text = "urunlerim";
-            this.Load += new System.EventHandler(this.urunlerim_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgUrunlerim)).EndInit();
+            this.Name = "satinAl";
+            this.Text = "alisSatis";
+            this.Load += new System.EventHandler(this.satinAl_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgPazar)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgUrunlerim;
+        private System.Windows.Forms.DataGridView dgPazar;
     }
 }

@@ -3,7 +3,7 @@ using System;
 
 namespace diyetUygulamasi
 {
-    partial class paraEkle
+    partial class hastaIslemleri
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@ namespace diyetUygulamasi
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(paraEkle));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(hastaIslemleri));
             this.txtParaMiktar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEkle = new System.Windows.Forms.Button();

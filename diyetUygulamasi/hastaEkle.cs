@@ -5,9 +5,9 @@ using System.Windows.Forms;
 
 namespace diyetUygulamasi
 {
-    public partial class urunEkle : Form
+    public partial class hastaEkle : Form
     {
-        public urunEkle()
+        public hastaEkle()
         {
             InitializeComponent();
         }

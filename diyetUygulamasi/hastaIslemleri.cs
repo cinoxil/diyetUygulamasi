@@ -5,9 +5,9 @@ using System.Windows.Forms;
 
 namespace diyetUygulamasi
 {
-    public partial class paraEkle : Form
+    public partial class hastaIslemleri : Form
     {
-        public paraEkle()
+        public hastaIslemleri()
         {
             InitializeComponent();
         }

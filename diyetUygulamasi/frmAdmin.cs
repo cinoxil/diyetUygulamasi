@@ -15,8 +15,9 @@ namespace diyetUygulamasi
         }
         private void frmAdmin_Load(object sender, EventArgs e)
         {
-          
+
         }
+        
 
         private void btnOturumKapat_Click_1(object sender, EventArgs e)
         {
@@ -24,9 +25,15 @@ namespace diyetUygulamasi
             panelIslemleri.oturumuKapat();
         }
 
-        
 
-        
+        private void btnEkle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
 
         //private void adminFormKapatma(object sender, FormClosingEventArgs e)
         //{

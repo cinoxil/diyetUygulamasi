@@ -6,9 +6,9 @@ using System.Windows.Forms;
 
 namespace diyetUygulamasi
 {
-    public partial class satinAl : Form
+    public partial class hastalikEkle : Form
     {
-        public satinAl()
+        public hastalikEkle()
         {
             InitializeComponent();
         }
