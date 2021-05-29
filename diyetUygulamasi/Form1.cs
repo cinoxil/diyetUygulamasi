@@ -29,6 +29,7 @@ namespace diyetUygulamasi
             kullaniciKontrol.StartPosition = FormStartPosition.Manual;
             kullaniciKontrol.Location = new Point(280, 130);
             kullaniciKontrol.Show();
+            btnOturumKapat.Enabled = true;
 
 
             //admin a = new admin();

@@ -99,7 +99,6 @@ namespace diyetUygulamasi.PanelIslem
             var gbIslemliste = (GroupBox)solPanel.Controls["grpBoxIslemListe"];
             var lblId = (Label)solPanel.Controls["lblId"];
             var lblPara = (Label)solPanel.Controls["lblPara"];
-            lblPara.Text = "";
             lblId.Text = "";
             //Grupboxın kontrollerine girip buttonları pasif hale getiriyor.
             foreach (Control item in gbIslemliste.Controls)
