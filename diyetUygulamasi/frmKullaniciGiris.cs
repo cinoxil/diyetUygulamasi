@@ -25,9 +25,6 @@ namespace diyetUygulamasi
             kisi.kullaniciGirisKontrol(txtKullaniciAdi.Text, txtSifre.Text,Application.OpenForms["frmKullaniciGiris"]);
         }
 
-        private void btnKayit_Click(object sender, EventArgs e)
-        {
-            panelIslemleri.kayitOlPencereGoster();
-        }
+        
     }
 }

@@ -3,7 +3,7 @@ using System;
 
 namespace diyetUygulamasi
 {
-    partial class Form1
+    partial class frmAna
     {
         /// <summary>
         /// Required designer variable.
@@ -32,11 +32,11 @@ namespace diyetUygulamasi
         private void InitializeComponent()
         {
             this.grpBoxIslemListe = new System.Windows.Forms.GroupBox();
-            this.btnParaEkle = new System.Windows.Forms.Button();
-            this.btnUrunEkle = new System.Windows.Forms.Button();
+            this.btnHastaIslemleri = new System.Windows.Forms.Button();
+            this.btnHastaEkle = new System.Windows.Forms.Button();
             this.btnOturumKapat = new System.Windows.Forms.Button();
-            this.btnUrunlerim = new System.Windows.Forms.Button();
-            this.btnSatinAl = new System.Windows.Forms.Button();
+            this.btnDiyetEkle = new System.Windows.Forms.Button();
+            this.btnHastalikEkle = new System.Windows.Forms.Button();
             this.pnlIslemler = new System.Windows.Forms.Panel();
             this.lblId = new System.Windows.Forms.Label();
             this.grpBoxIslemListe.SuspendLayout();
@@ -45,11 +45,11 @@ namespace diyetUygulamasi
             // 
             // grpBoxIslemListe
             // 
-            this.grpBoxIslemListe.Controls.Add(this.btnParaEkle);
-            this.grpBoxIslemListe.Controls.Add(this.btnUrunEkle);
+            this.grpBoxIslemListe.Controls.Add(this.btnHastaIslemleri);
+            this.grpBoxIslemListe.Controls.Add(this.btnHastaEkle);
             this.grpBoxIslemListe.Controls.Add(this.btnOturumKapat);
-            this.grpBoxIslemListe.Controls.Add(this.btnUrunlerim);
-            this.grpBoxIslemListe.Controls.Add(this.btnSatinAl);
+            this.grpBoxIslemListe.Controls.Add(this.btnDiyetEkle);
+            this.grpBoxIslemListe.Controls.Add(this.btnHastalikEkle);
             this.grpBoxIslemListe.Location = new System.Drawing.Point(6, 108);
             this.grpBoxIslemListe.Name = "grpBoxIslemListe";
             this.grpBoxIslemListe.Size = new System.Drawing.Size(115, 206);
@@ -57,27 +57,27 @@ namespace diyetUygulamasi
             this.grpBoxIslemListe.TabStop = false;
             this.grpBoxIslemListe.Text = "İşlem Listesi";
             // 
-            // btnParaEkle
+            // btnHastaIslemleri
             // 
-            this.btnParaEkle.Enabled = false;
-            this.btnParaEkle.Location = new System.Drawing.Point(6, 55);
-            this.btnParaEkle.Name = "btnParaEkle";
-            this.btnParaEkle.Size = new System.Drawing.Size(102, 28);
-            this.btnParaEkle.TabIndex = 1;
-            this.btnParaEkle.Text = "Hasta Islemleri";
-            this.btnParaEkle.UseVisualStyleBackColor = true;
-            this.btnParaEkle.Click += new System.EventHandler(this.btnParaEkle_Click);
+            this.btnHastaIslemleri.Enabled = false;
+            this.btnHastaIslemleri.Location = new System.Drawing.Point(6, 55);
+            this.btnHastaIslemleri.Name = "btnHastaIslemleri";
+            this.btnHastaIslemleri.Size = new System.Drawing.Size(102, 28);
+            this.btnHastaIslemleri.TabIndex = 1;
+            this.btnHastaIslemleri.Text = "Hasta Islemleri";
+            this.btnHastaIslemleri.UseVisualStyleBackColor = true;
+            this.btnHastaIslemleri.Click += new System.EventHandler(this.btnHastaIslemleri_Click);
             // 
-            // btnUrunEkle
+            // btnHastaEkle
             // 
-            this.btnUrunEkle.Enabled = false;
-            this.btnUrunEkle.Location = new System.Drawing.Point(6, 21);
-            this.btnUrunEkle.Name = "btnUrunEkle";
-            this.btnUrunEkle.Size = new System.Drawing.Size(102, 28);
-            this.btnUrunEkle.TabIndex = 0;
-            this.btnUrunEkle.Text = "Hasta Ekle";
-            this.btnUrunEkle.UseVisualStyleBackColor = true;
-            this.btnUrunEkle.Click += new System.EventHandler(this.btnUrunEkle_Click);
+            this.btnHastaEkle.Enabled = false;
+            this.btnHastaEkle.Location = new System.Drawing.Point(6, 21);
+            this.btnHastaEkle.Name = "btnHastaEkle";
+            this.btnHastaEkle.Size = new System.Drawing.Size(102, 28);
+            this.btnHastaEkle.TabIndex = 0;
+            this.btnHastaEkle.Text = "Hasta Ekle";
+            this.btnHastaEkle.UseVisualStyleBackColor = true;
+            this.btnHastaEkle.Click += new System.EventHandler(this.btnHastaEkle_Click);
             // 
             // btnOturumKapat
             // 
@@ -90,27 +90,27 @@ namespace diyetUygulamasi
             this.btnOturumKapat.UseVisualStyleBackColor = true;
             this.btnOturumKapat.Click += new System.EventHandler(this.btnOturumKapat_Click);
             // 
-            // btnUrunlerim
+            // btnDiyetEkle
             // 
-            this.btnUrunlerim.Enabled = false;
-            this.btnUrunlerim.Location = new System.Drawing.Point(6, 123);
-            this.btnUrunlerim.Name = "btnUrunlerim";
-            this.btnUrunlerim.Size = new System.Drawing.Size(102, 28);
-            this.btnUrunlerim.TabIndex = 3;
-            this.btnUrunlerim.Text = "Diyet Ekle";
-            this.btnUrunlerim.UseVisualStyleBackColor = true;
-            this.btnUrunlerim.Click += new System.EventHandler(this.btnUrunlerim_Click);
+            this.btnDiyetEkle.Enabled = false;
+            this.btnDiyetEkle.Location = new System.Drawing.Point(6, 123);
+            this.btnDiyetEkle.Name = "btnDiyetEkle";
+            this.btnDiyetEkle.Size = new System.Drawing.Size(102, 28);
+            this.btnDiyetEkle.TabIndex = 3;
+            this.btnDiyetEkle.Text = "Diyet Ekle";
+            this.btnDiyetEkle.UseVisualStyleBackColor = true;
+            this.btnDiyetEkle.Click += new System.EventHandler(this.btnDiyetEkle_Click);
             // 
-            // btnSatinAl
+            // btnHastalikEkle
             // 
-            this.btnSatinAl.Enabled = false;
-            this.btnSatinAl.Location = new System.Drawing.Point(7, 89);
-            this.btnSatinAl.Name = "btnSatinAl";
-            this.btnSatinAl.Size = new System.Drawing.Size(102, 28);
-            this.btnSatinAl.TabIndex = 2;
-            this.btnSatinAl.Text = "Hastalik Ekle";
-            this.btnSatinAl.UseVisualStyleBackColor = true;
-            this.btnSatinAl.Click += new System.EventHandler(this.btnSatinAl_Click);
+            this.btnHastalikEkle.Enabled = false;
+            this.btnHastalikEkle.Location = new System.Drawing.Point(7, 89);
+            this.btnHastalikEkle.Name = "btnHastalikEkle";
+            this.btnHastalikEkle.Size = new System.Drawing.Size(102, 28);
+            this.btnHastalikEkle.TabIndex = 2;
+            this.btnHastalikEkle.Text = "Hastalik Ekle";
+            this.btnHastalikEkle.UseVisualStyleBackColor = true;
+            this.btnHastalikEkle.Click += new System.EventHandler(this.btnHastalikEkle_Click);
             // 
             // pnlIslemler
             // 
@@ -130,7 +130,7 @@ namespace diyetUygulamasi
             this.lblId.TabIndex = 2;
             this.lblId.Text = "id";
             // 
-            // Form1
+            // frmAna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -139,9 +139,9 @@ namespace diyetUygulamasi
             this.Controls.Add(this.pnlIslemler);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.IsMdiContainer = true;
-            this.Name = "Form1";
+            this.Name = "frmAna";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Alım - Satım Uygulaması";
+            this.Text = "Diyetisyen Uygulaması";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.grpBoxIslemListe.ResumeLayout(false);
             this.pnlIslemler.ResumeLayout(false);
@@ -155,13 +155,13 @@ namespace diyetUygulamasi
         #endregion
 
         private System.Windows.Forms.GroupBox grpBoxIslemListe;
-        private System.Windows.Forms.Button btnParaEkle;
-        private System.Windows.Forms.Button btnUrunEkle;
-        private System.Windows.Forms.Button btnSatinAl;
+        private System.Windows.Forms.Button btnHastaIslemleri;
+        private System.Windows.Forms.Button btnHastaEkle;
+        private System.Windows.Forms.Button btnHastalikEkle;
         private System.Windows.Forms.Panel pnlIslemler;
         private System.Windows.Forms.Button btnOturumKapat;
         private System.Windows.Forms.Label lblId;
-        private System.Windows.Forms.Button btnUrunlerim;
+        private System.Windows.Forms.Button btnDiyetEkle;
     }
 }
 

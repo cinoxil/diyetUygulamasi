@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using diyetUygulamasi.PanelIslem;
+using System;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace diyetUygulamasi
 {
@@ -14,7 +11,30 @@ namespace diyetUygulamasi
     {
         public frmAdmin()
         {
-            InitializeComponent();
+              InitializeComponent(); 
         }
+        private void frmAdmin_Load(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void btnOturumKapat_Click_1(object sender, EventArgs e)
+        {
+            
+            panelIslemleri.oturumuKapat();
+        }
+
+        
+
+        
+
+        //private void adminFormKapatma(object sender, FormClosingEventArgs e)
+        //{
+        //    //Açık formlardan adı Form1 olanı yakalıyor.
+        //    var anaForm = Application.OpenForms["Form1"];
+        //    //Anaformu kapatıyor.
+        //    if (anaForm != null) anaForm.Close();
+        //}
+
     }
 }

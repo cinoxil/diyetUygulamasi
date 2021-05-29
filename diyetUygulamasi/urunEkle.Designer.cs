@@ -1,7 +1,7 @@
 ﻿
 namespace diyetUygulamasi
 {
-    partial class frmAdmin
+    partial class urunEkle
     {
         /// <summary>
         /// Required designer variable.
@@ -29,32 +29,32 @@ namespace diyetUygulamasi
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnOturumKapat = new System.Windows.Forms.Button();
+            this.gbUrunTxt = new System.Windows.Forms.GroupBox();
             this.SuspendLayout();
             // 
-            // btnOturumKapat
+            // gbUrunTxt
             // 
-            this.btnOturumKapat.Location = new System.Drawing.Point(694, 415);
-            this.btnOturumKapat.Name = "btnOturumKapat";
-            this.btnOturumKapat.Size = new System.Drawing.Size(94, 23);
-            this.btnOturumKapat.TabIndex = 0;
-            this.btnOturumKapat.Text = "Oturumu Kapat";
-            this.btnOturumKapat.UseVisualStyleBackColor = true;
-            this.btnOturumKapat.Click += new System.EventHandler(this.btnOturumKapat_Click_1);
+            this.gbUrunTxt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.gbUrunTxt.Location = new System.Drawing.Point(-3, -10);
+            this.gbUrunTxt.Name = "gbUrunTxt";
+            this.gbUrunTxt.Size = new System.Drawing.Size(241, 198);
+            this.gbUrunTxt.TabIndex = 5;
+            this.gbUrunTxt.TabStop = false;
             // 
-            // frmAdmin
+            // urunEkle
             // 
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnOturumKapat);
-            this.Name = "frmAdmin";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(235, 162);
+            this.Controls.Add(this.gbUrunTxt);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "urunEkle";
+            this.Text = "urunEkle";
             this.ResumeLayout(false);
 
         }
 
-
         #endregion
-
-        private System.Windows.Forms.Button btnOturumKapat;
+        private System.Windows.Forms.GroupBox gbUrunTxt;
     }
 }
