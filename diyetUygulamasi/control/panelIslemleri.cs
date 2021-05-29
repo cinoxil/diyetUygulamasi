@@ -1,11 +1,12 @@
-﻿using diyetUygulamasi.database;
+﻿using diyetUygulamasi.control;
+using diyetUygulamasi.database;
 using System;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
 
-namespace diyetUygulamasi.PanelIslem
+namespace diyetUygulamasi.PanelIslemleri
 {
     public static class panelIslemleri
     {
@@ -59,7 +60,7 @@ namespace diyetUygulamasi.PanelIslem
             var gbIslemliste = (GroupBox)solPanel.Controls["grpBoxIslemListe"]; /*gbIslemListe deşikenine solPanel kontrolledindeki grpBoxIslemListe isimli groupboxı eşitliyor.*/
             var lblId = (Label)solPanel.Controls["lblId"];
             //Geçerli kullanıcının kullanıcı adını ilgili labellere yazıyor.
-            lblId.Text = db.gecerliKullanici;
+            lblId.Text = kullaniciKontrol.gecerliDiyetisyen.kullaniciAdi;
 
             //Grupboxın kontrollerine girip buttonları aktif hale getiriyor.
             foreach (Control item in gbIslemliste.Controls)

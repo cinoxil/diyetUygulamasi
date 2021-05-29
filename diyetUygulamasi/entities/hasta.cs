@@ -8,7 +8,7 @@ namespace diyetUygulamasi.entities
 {
     public class hasta : kisi
     {
-        public List<hastalik> hastalik { get; set; }
+        public hastalik hastalik { get; set; }
         public diyet diyet { get; set; }
 
         public hasta(string _tc, string _ad, string _soyad)
@@ -17,6 +17,8 @@ namespace diyetUygulamasi.entities
             ad = _ad;
             soyad = _soyad;
             isAdmin = false;
+            hastalik = new hastalik("");
+            diyet = new diyet("");
         }
 
 

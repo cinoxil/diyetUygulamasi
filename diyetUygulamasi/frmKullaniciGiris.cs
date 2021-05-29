@@ -1,5 +1,6 @@
 ﻿using diyetUygulamasi.entities;
-using diyetUygulamasi.PanelIslem;
+using diyetUygulamasi.control;
+using diyetUygulamasi.PanelIslemleri;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,7 +23,7 @@ namespace diyetUygulamasi
         private void btnGiris_Click(object sender, EventArgs e)
         {
             //Texboxlardan bilgiler alınıp kullanıcı classı altındaki kullaniciGirisKontrol fonsiyonuna gönderiliyor.
-            kisi.kullaniciGirisKontrol(txtKullaniciAdi.Text, txtSifre.Text,Application.OpenForms["frmKullaniciGiris"]);
+            kullaniciKontrol.kullaniciGirisKontrol(txtKullaniciAdi.Text, txtSifre.Text,Application.OpenForms["frmKullaniciGiris"]);
         }
 
         

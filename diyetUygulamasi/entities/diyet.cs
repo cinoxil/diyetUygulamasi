@@ -10,5 +10,15 @@ namespace diyetUygulamasi.entities
     {
         public string adi { get; set; }
         public List<string> diyetListe { get; set; }
+
+        public diyet(string _ad)
+        {
+            adi = _ad;
+        }
+
+        public override string ToString()
+        {
+            return adi;
+        }
     }
 }

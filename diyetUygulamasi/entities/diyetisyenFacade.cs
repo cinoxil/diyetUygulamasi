@@ -1,4 +1,5 @@
-﻿using diyetUygulamasi.database;
+﻿using diyetUygulamasi.control;
+using diyetUygulamasi.database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace diyetUygulamasi.entities
         {
             if (!hastaKayitKontrol.isHastaKayitli(hasta))
             {
-                diyetisyen gecerliKullanici = db.diyetisyenler.Where(x => x.kullaniciAdi == "ugur").FirstOrDefault();
+                diyetisyen gecerliKullanici = kullaniciKontrol.gecerliDiyetisyen;
                 gecerliKullanici.kisiEkle(hasta);
             }
         }

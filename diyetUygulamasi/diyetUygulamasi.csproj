@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="control\kullaniciKontrol.cs" />
     <Compile Include="database\db.cs" />
     <Compile Include="entities\admin.cs" />
     <Compile Include="entities\diyet.cs" />
@@ -74,7 +75,7 @@
       <DependentUpon>frmKullaniciGiris.cs</DependentUpon>
     </Compile>
     <Compile Include="IEkleme.cs" />
-    <Compile Include="PanelIslem\panelIslemleri.cs" />
+    <Compile Include="control\panelIslemleri.cs" />
     <Compile Include="hastaIslemleri.cs">
       <SubType>Form</SubType>
     </Compile>

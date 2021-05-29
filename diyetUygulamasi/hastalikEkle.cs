@@ -1,4 +1,6 @@
-﻿using System;
+﻿using diyetUygulamasi.database;
+using diyetUygulamasi.entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
@@ -15,8 +17,28 @@ namespace diyetUygulamasi
 
 
 
-        private void satinAl_Load(object sender, EventArgs e)
+        private void btnEkle_Click(object sender, EventArgs e)
         {
+            if (hastalikKontrol(txtHastalik.Text))
+            {
+                hastalik hastalik = new hastalik(txtHastalik.Text);
+                db.hastaliklar.Add(hastalik);
+            }
+        }
+
+        private bool hastalikKontrol(string ad)
+        {
+            if (!(db.hastaliklar.Find(x => x.adi == ad) == null))
+            {
+                MessageBox.Show("Bu hastalik daha once eklenmis");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
+            
 
         }
     }

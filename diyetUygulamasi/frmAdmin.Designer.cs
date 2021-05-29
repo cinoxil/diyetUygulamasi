@@ -48,10 +48,10 @@ namespace diyetUygulamasi
             this.btnOturumKapat.Location = new System.Drawing.Point(394, 304);
             this.btnOturumKapat.Name = "btnOturumKapat";
             this.btnOturumKapat.Size = new System.Drawing.Size(94, 23);
-            this.btnOturumKapat.TabIndex = 0;
+            this.btnOturumKapat.TabIndex = 6;
             this.btnOturumKapat.Text = "Oturumu Kapat";
             this.btnOturumKapat.UseVisualStyleBackColor = true;
-            this.btnOturumKapat.Click += new System.EventHandler(this.btnOturumKapat_Click_1);
+            this.btnOturumKapat.Click += new System.EventHandler(this.btnOturumKapat_Click);
             // 
             // label1
             // 
@@ -67,7 +67,7 @@ namespace diyetUygulamasi
             this.btnEkle.Location = new System.Drawing.Point(245, 209);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(75, 23);
-            this.btnEkle.TabIndex = 2;
+            this.btnEkle.TabIndex = 5;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = true;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
@@ -78,7 +78,7 @@ namespace diyetUygulamasi
             this.txtTc.MaxLength = 11;
             this.txtTc.Name = "txtTc";
             this.txtTc.Size = new System.Drawing.Size(100, 20);
-            this.txtTc.TabIndex = 3;
+            this.txtTc.TabIndex = 0;
             // 
             // label2
             // 
@@ -94,7 +94,7 @@ namespace diyetUygulamasi
             this.txtAd.Location = new System.Drawing.Point(220, 89);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(100, 20);
-            this.txtAd.TabIndex = 3;
+            this.txtAd.TabIndex = 1;
             // 
             // label3
             // 
@@ -110,7 +110,7 @@ namespace diyetUygulamasi
             this.txtSoyad.Location = new System.Drawing.Point(220, 115);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(100, 20);
-            this.txtSoyad.TabIndex = 3;
+            this.txtSoyad.TabIndex = 2;
             // 
             // label4
             // 
@@ -142,7 +142,7 @@ namespace diyetUygulamasi
             this.txtParola.Location = new System.Drawing.Point(220, 167);
             this.txtParola.Name = "txtParola";
             this.txtParola.Size = new System.Drawing.Size(100, 20);
-            this.txtParola.TabIndex = 3;
+            this.txtParola.TabIndex = 4;
             // 
             // frmAdmin
             // 
@@ -161,6 +161,7 @@ namespace diyetUygulamasi
             this.Controls.Add(this.btnOturumKapat);
             this.Name = "frmAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Admin";
             this.Load += new System.EventHandler(this.frmAdmin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

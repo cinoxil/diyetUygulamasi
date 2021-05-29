@@ -29,35 +29,58 @@ namespace diyetUygulamasi
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgUrunlerim = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgUrunlerim)).BeginInit();
+            this.btnEkle = new System.Windows.Forms.Button();
+            this.txtDiyet = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // dgUrunlerim
+            // btnEkle
             // 
-            this.dgUrunlerim.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgUrunlerim.Location = new System.Drawing.Point(12, 12);
-            this.dgUrunlerim.Name = "dgUrunlerim";
-            this.dgUrunlerim.Size = new System.Drawing.Size(345, 278);
-            this.dgUrunlerim.TabIndex = 0;
+            this.btnEkle.Location = new System.Drawing.Point(77, 66);
+            this.btnEkle.Name = "btnEkle";
+            this.btnEkle.Size = new System.Drawing.Size(100, 23);
+            this.btnEkle.TabIndex = 5;
+            this.btnEkle.Text = "Diyet Ekle";
+            this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
-            // urunlerim
+            // txtDiyet
+            // 
+            this.txtDiyet.Location = new System.Drawing.Point(77, 28);
+            this.txtDiyet.Name = "txtDiyet";
+            this.txtDiyet.Size = new System.Drawing.Size(100, 20);
+            this.txtDiyet.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(20, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Diyet :";
+            // 
+            // diyetEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(368, 303);
-            this.Controls.Add(this.dgUrunlerim);
+            this.ClientSize = new System.Drawing.Size(214, 113);
+            this.Controls.Add(this.btnEkle);
+            this.Controls.Add(this.txtDiyet);
+            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "urunlerim";
+            this.Name = "diyetEkle";
             this.Text = "urunlerim";
             this.Load += new System.EventHandler(this.urunlerim_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgUrunlerim)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgUrunlerim;
+        private System.Windows.Forms.Button btnEkle;
+        private System.Windows.Forms.TextBox txtDiyet;
+        private System.Windows.Forms.Label label1;
     }
 }

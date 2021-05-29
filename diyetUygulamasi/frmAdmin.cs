@@ -1,4 +1,6 @@
-﻿using diyetUygulamasi.PanelIslem;
+﻿using diyetUygulamasi.database;
+using diyetUygulamasi.entities;
+using diyetUygulamasi.PanelIslemleri;
 using System;
 using System.Drawing;
 using System.Linq;
@@ -19,16 +21,17 @@ namespace diyetUygulamasi
         }
         
 
-        private void btnOturumKapat_Click_1(object sender, EventArgs e)
+        private void btnOturumKapat_Click(object sender, EventArgs e)
         {
-            
             panelIslemleri.oturumuKapat();
         }
+            
 
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-
+            db.admin.kisiEkle(new diyetisyen(txtTc.Text,txtAd.Text,txtSoyad.Text, txtId.Text, txtParola.Text));
+            panelIslemleri.formTemizle(Application.OpenForms["frmAdmin"]);
         }
 
 
