@@ -18,7 +18,7 @@ namespace diyetUygulamasi.entities
             soyad = _soyad;
             isAdmin = false;
             hastalik = new hastalik("");
-            diyet = new diyet("");
+            diyet = new diyet("","", "", "",0);
         }
 
 

@@ -37,13 +37,13 @@ namespace diyetUygulamasi
             hastalik = new hastalik("Seker");
             db.hastaliklar.Add(hastalik);
 
-            diyet diyet = new diyet("Akdeniz");
+            diyet diyet = new diyet("Akdeniz","","","",0);
             db.diyetler.Add(diyet);
-            diyet = new diyet("Gluten Free");
+            diyet = new diyet("Gluten Free", "", "", "", 0);
             db.diyetler.Add(diyet);
-            diyet = new diyet("Deniz Urunleri");
+            diyet = new diyet("Deniz Urunleri", "", "", "", 0);
             db.diyetler.Add(diyet);
-            diyet = new diyet("Yesillikler Dunyasi");
+            diyet = new diyet("Yesillikler Dunyasi", "", "", "", 0);
             db.diyetler.Add(diyet);
 
 
@@ -96,7 +96,7 @@ namespace diyetUygulamasi
             var urunlerim = new diyetEkle();
             urunlerim.MdiParent = this; //Form1i urunlerim formunun MdiParrentı olarak belirliyor.
             urunlerim.StartPosition = FormStartPosition.Manual;
-            urunlerim.Location = new Point(350, 170);
+            urunlerim.Location = new Point(260, 130);
             panelIslemleri.pencereleriKapat();
             urunlerim.Show();
         }

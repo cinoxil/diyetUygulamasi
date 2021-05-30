@@ -69,6 +69,8 @@ namespace diyetUygulamasi
         }
 
         string hastaTc;
+        private diyet diyetler;
+
         private void dgHastalar_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex > -1 && e.ColumnIndex > -1) dgHastalar.Rows[e.RowIndex].Selected = true;
@@ -82,7 +84,7 @@ namespace diyetUygulamasi
             hasta hasta = kullaniciKontrol.gecerliDiyetisyen.hastalar.Where(x => x.tc == hastaTc).FirstOrDefault();
 
             hasta.hastalik.adi = cmbHastaliklar.SelectedItem.ToString();
-            hasta.diyet.adi = cmbDiyetler.SelectedItem.ToString();
+            hasta.diyet = db.diyetler.Find(x => x.adi == cmbDiyetler.SelectedItem.ToString());
             dgHastalar.Rows.Clear();
             hastalariListele(dgHastalar);
         }
