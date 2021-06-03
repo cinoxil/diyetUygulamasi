@@ -28,7 +28,7 @@ namespace diyetUygulamasi
 
         private void hastaIslemleri_Load(object sender, EventArgs e)
         {
-            
+
             dgHastalar.AllowUserToDeleteRows = false;
 
             dgHastalar.ColumnCount = 5;
@@ -60,17 +60,17 @@ namespace diyetUygulamasi
         {
             for (int i = 0; i < kullaniciKontrol.gecerliDiyetisyen.hastalar.Count; i++)
             {
-            dg.Rows.Add(kullaniciKontrol.gecerliDiyetisyen.hastalar[i].tc,
-                         kullaniciKontrol.gecerliDiyetisyen.hastalar[i].ad,
-                         kullaniciKontrol.gecerliDiyetisyen.hastalar[i].soyad,
-                         kullaniciKontrol.gecerliDiyetisyen.hastalar[i].hastalik,
-                         kullaniciKontrol.gecerliDiyetisyen.hastalar[i].diyet);
+                dg.Rows.Add(kullaniciKontrol.gecerliDiyetisyen.hastalar[i].tc,
+                             kullaniciKontrol.gecerliDiyetisyen.hastalar[i].ad,
+                             kullaniciKontrol.gecerliDiyetisyen.hastalar[i].soyad,
+                             kullaniciKontrol.gecerliDiyetisyen.hastalar[i].hastalik,
+                             kullaniciKontrol.gecerliDiyetisyen.hastalar[i].diyet);
 
             }
         }
 
         public string hastaTc;
-       
+
 
         private void dgHastalar_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -82,7 +82,7 @@ namespace diyetUygulamasi
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-           
+
 
             hasta hasta = kullaniciKontrol.gecerliDiyetisyen.hastalar.Where(x => x.tc == hastaTc).FirstOrDefault();
             hasta.hastalik.adi = cmbHastaliklar.SelectedItem.ToString();
@@ -96,14 +96,19 @@ namespace diyetUygulamasi
             hasta hasta = kullaniciKontrol.gecerliDiyetisyen.hastalar.Where(x => x.tc == hastaTc).FirstOrDefault();
             reportClass.hasta = hasta;
 
-            var reportView = new reportView();
-            reportView.hastaTc = hastaTc;
-            reportView.hasta = hasta;
-            reportView.StartPosition = FormStartPosition.Manual;
-            reportView.Location = new Point(330, 120);
-            reportView.Show();
+            var rapor = new frmRapor();
+
+            rapor.hasta = hasta;
+            rapor.StartPosition = FormStartPosition.Manual;
+            rapor.Location = new Point(330, 120);
+            rapor.Show();
 
         }
+
+
+
+
+
 
 
     }

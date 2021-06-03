@@ -153,11 +153,11 @@
     <Compile Include="diyetEkle.Designer.cs">
       <DependentUpon>diyetEkle.cs</DependentUpon>
     </Compile>
-    <Compile Include="reportView.cs">
+    <Compile Include="frmRapor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="reportView.Designer.cs">
-      <DependentUpon>reportView.cs</DependentUpon>
+    <Compile Include="frmRapor.Designer.cs">
+      <DependentUpon>frmRapor.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmAna.resx">
       <DependentUpon>frmAna.cs</DependentUpon>
@@ -189,15 +189,10 @@
     <EmbeddedResource Include="diyetEkle.resx">
       <DependentUpon>diyetEkle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report1.rdlc" />
-    <EmbeddedResource Include="reportView.resx">
-      <DependentUpon>reportView.cs</DependentUpon>
+    <EmbeddedResource Include="frmRapor.resx">
+      <DependentUpon>frmRapor.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\diyetUygulamasi.database.hastalik.datasource" />
-    <None Include="Properties\DataSources\diyetUygulamasi.entities.diyet.datasource" />
-    <None Include="Properties\DataSources\diyetUygulamasi.entities.diyetGunu.datasource" />
-    <None Include="Properties\DataSources\diyetUygulamasi.entities.hasta.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
