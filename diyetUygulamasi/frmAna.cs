@@ -18,12 +18,18 @@ namespace diyetUygulamasi
     {
         public frmAna()
         {
+            FormClosing += anaFormKapatma;
             InitializeComponent();
+        }
+
+        private void anaFormKapatma(object sender, FormClosingEventArgs e)
+        {
+            db.serializeJSON();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            db.deSerializeJSON(); //Program ilk açıldığında database içindeki deSerializeJSON methodu çalışıyor.
             var kullaniciKontrol = new frmKullaniciGiris();
             kullaniciKontrol.MdiParent = this; //Form1i frmKullanıcıGiris formunun MdiParrentı olarak belirliyor.
             kullaniciKontrol.StartPosition = FormStartPosition.Manual;
@@ -48,15 +54,15 @@ namespace diyetUygulamasi
 
 
 
-            diyetisyen diyetisyen = new diyetisyen("23587421548", "ugur", "adw", "ugur", "123");
-            db.admin.kisiEkle(diyetisyen);
+            //diyetisyen diyetisyen = new diyetisyen("23587421548", "ugur", "adw", "ugur", "123");
+            //db.admin.kisiEkle(diyetisyen);
 
         
         }
 
         private void btnOturumKapat_Click(object sender, EventArgs e)
         {
-            
+            db.serializeJSON();
             panelIslemleri.pencereleriKapat();
             panelIslemleri.oturumuKapat();
         }

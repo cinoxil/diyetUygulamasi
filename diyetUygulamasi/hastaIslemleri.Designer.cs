@@ -37,6 +37,7 @@ namespace diyetUygulamasi
             this.cmbDiyetler = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnGuncelle = new System.Windows.Forms.Button();
+            this.btnRaporAl = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgHastalar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,11 +96,22 @@ namespace diyetUygulamasi
             this.btnGuncelle.UseVisualStyleBackColor = true;
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
+            // btnRaporAl
+            // 
+            this.btnRaporAl.Location = new System.Drawing.Point(391, 240);
+            this.btnRaporAl.Name = "btnRaporAl";
+            this.btnRaporAl.Size = new System.Drawing.Size(116, 39);
+            this.btnRaporAl.TabIndex = 3;
+            this.btnRaporAl.Text = "Rapor Al";
+            this.btnRaporAl.UseVisualStyleBackColor = true;
+            this.btnRaporAl.Click += new System.EventHandler(this.btnRaporAl_Click);
+            // 
             // hastaIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(655, 286);
+            this.Controls.Add(this.btnRaporAl);
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -126,5 +138,6 @@ namespace diyetUygulamasi
         private System.Windows.Forms.ComboBox cmbDiyetler;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnGuncelle;
+        private System.Windows.Forms.Button btnRaporAl;
     }
 }

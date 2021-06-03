@@ -13,8 +13,18 @@ namespace diyetUygulamasi
     {
         public frmAdmin()
         {
-              InitializeComponent(); 
+            FormClosing += adminFormKapatma;
+            InitializeComponent(); 
         }
+
+        private void adminFormKapatma(object sender, FormClosingEventArgs e)
+        {
+            //Açık formlardan adı Form1 olanı yakalıyor.
+            var anaForm = Application.OpenForms["frmAna"];
+            //Anaformu kapatıyor.
+            if (anaForm != null) anaForm.Close();
+        }
+
         private void frmAdmin_Load(object sender, EventArgs e)
         {
 
@@ -23,6 +33,7 @@ namespace diyetUygulamasi
 
         private void btnOturumKapat_Click(object sender, EventArgs e)
         {
+            db.serializeJSON();
             panelIslemleri.oturumuKapat();
         }
             

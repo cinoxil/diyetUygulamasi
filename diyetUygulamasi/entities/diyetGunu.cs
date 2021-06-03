@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace diyetUygulamasi.entities
 {
@@ -20,5 +21,7 @@ namespace diyetUygulamasi.entities
             oglen = _oglen;
             aksam = _aksam;
         }
+
+        
     }
 }

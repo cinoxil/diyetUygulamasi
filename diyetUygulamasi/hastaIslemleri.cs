@@ -2,6 +2,7 @@
 using diyetUygulamasi.database;
 using diyetUygulamasi.entities;
 using System;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -68,8 +69,8 @@ namespace diyetUygulamasi
             }
         }
 
-        string hastaTc;
-        private diyet diyetler;
+        public string hastaTc;
+       
 
         private void dgHastalar_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -81,12 +82,29 @@ namespace diyetUygulamasi
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            hasta hasta = kullaniciKontrol.gecerliDiyetisyen.hastalar.Where(x => x.tc == hastaTc).FirstOrDefault();
+           
 
+            hasta hasta = kullaniciKontrol.gecerliDiyetisyen.hastalar.Where(x => x.tc == hastaTc).FirstOrDefault();
             hasta.hastalik.adi = cmbHastaliklar.SelectedItem.ToString();
             hasta.diyet = db.diyetler.Find(x => x.adi == cmbDiyetler.SelectedItem.ToString());
             dgHastalar.Rows.Clear();
             hastalariListele(dgHastalar);
         }
+
+        private void btnRaporAl_Click(object sender, EventArgs e)
+        {
+            hasta hasta = kullaniciKontrol.gecerliDiyetisyen.hastalar.Where(x => x.tc == hastaTc).FirstOrDefault();
+            reportClass.hasta = hasta;
+
+            var reportView = new reportView();
+            reportView.hastaTc = hastaTc;
+            reportView.hasta = hasta;
+            reportView.StartPosition = FormStartPosition.Manual;
+            reportView.Location = new Point(330, 120);
+            reportView.Show();
+
+        }
+
+
     }
 }

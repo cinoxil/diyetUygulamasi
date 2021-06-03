@@ -24,18 +24,22 @@ namespace diyetUygulamasi.entities
             }
             set
             {
-                if (value.Length == 11)
+                if (value != null)
                 {
-                    this._tc = value;
-                }
-                else
-                {
-                    MessageBox.Show("TC Kimlik No 11 haneli olmalidir");
+
+                    if (value.Length == 11)
+                    {
+                        this._tc = value;
+                    }
+                    else
+                    {
+                        MessageBox.Show("TC Kimlik No 11 haneli olmalidir");
+                    }
                 }
             }
         }
 
 
-        
+
     }
 }
