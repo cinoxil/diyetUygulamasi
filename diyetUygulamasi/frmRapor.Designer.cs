@@ -75,7 +75,7 @@ namespace diyetUygulamasi
             this.txtDiyet.Location = new System.Drawing.Point(357, 55);
             this.txtDiyet.Name = "txtDiyet";
             this.txtDiyet.ReadOnly = true;
-            this.txtDiyet.Size = new System.Drawing.Size(100, 20);
+            this.txtDiyet.Size = new System.Drawing.Size(100, 22);
             this.txtDiyet.TabIndex = 1;
             // 
             // txtHastalik
@@ -83,7 +83,7 @@ namespace diyetUygulamasi
             this.txtHastalik.Location = new System.Drawing.Point(357, 28);
             this.txtHastalik.Name = "txtHastalik";
             this.txtHastalik.ReadOnly = true;
-            this.txtHastalik.Size = new System.Drawing.Size(100, 20);
+            this.txtHastalik.Size = new System.Drawing.Size(100, 22);
             this.txtHastalik.TabIndex = 1;
             // 
             // txtSoyad
@@ -91,7 +91,7 @@ namespace diyetUygulamasi
             this.txtSoyad.Location = new System.Drawing.Point(104, 82);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.ReadOnly = true;
-            this.txtSoyad.Size = new System.Drawing.Size(100, 20);
+            this.txtSoyad.Size = new System.Drawing.Size(100, 22);
             this.txtSoyad.TabIndex = 1;
             // 
             // txtAd
@@ -99,7 +99,7 @@ namespace diyetUygulamasi
             this.txtAd.Location = new System.Drawing.Point(104, 55);
             this.txtAd.Name = "txtAd";
             this.txtAd.ReadOnly = true;
-            this.txtAd.Size = new System.Drawing.Size(100, 20);
+            this.txtAd.Size = new System.Drawing.Size(100, 22);
             this.txtAd.TabIndex = 1;
             // 
             // txtTc
@@ -107,7 +107,7 @@ namespace diyetUygulamasi
             this.txtTc.Location = new System.Drawing.Point(104, 28);
             this.txtTc.Name = "txtTc";
             this.txtTc.ReadOnly = true;
-            this.txtTc.Size = new System.Drawing.Size(100, 20);
+            this.txtTc.Size = new System.Drawing.Size(100, 22);
             this.txtTc.TabIndex = 1;
             // 
             // label5
@@ -115,7 +115,7 @@ namespace diyetUygulamasi
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(259, 58);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.Size = new System.Drawing.Size(48, 17);
             this.label5.TabIndex = 0;
             this.label5.Text = "Diyet :";
             // 
@@ -124,7 +124,7 @@ namespace diyetUygulamasi
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(259, 31);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 13);
+            this.label4.Size = new System.Drawing.Size(66, 17);
             this.label4.TabIndex = 0;
             this.label4.Text = "Hastalik :";
             // 
@@ -133,7 +133,7 @@ namespace diyetUygulamasi
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 85);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.Size = new System.Drawing.Size(56, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "Soyad :";
             // 
@@ -142,7 +142,7 @@ namespace diyetUygulamasi
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(26, 13);
+            this.label2.Size = new System.Drawing.Size(33, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Ad :";
             // 
@@ -151,7 +151,7 @@ namespace diyetUygulamasi
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 13);
+            this.label1.Size = new System.Drawing.Size(34, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "TC :";
             // 
@@ -169,10 +169,11 @@ namespace diyetUygulamasi
             // 
             this.dgDiyet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgDiyet.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgDiyet.Location = new System.Drawing.Point(3, 16);
+            this.dgDiyet.Location = new System.Drawing.Point(3, 18);
             this.dgDiyet.Name = "dgDiyet";
             this.dgDiyet.ReadOnly = true;
-            this.dgDiyet.Size = new System.Drawing.Size(474, 330);
+            this.dgDiyet.RowHeadersWidth = 51;
+            this.dgDiyet.Size = new System.Drawing.Size(474, 328);
             this.dgDiyet.TabIndex = 0;
             // 
             // button1
@@ -192,6 +193,7 @@ namespace diyetUygulamasi
             this.button2.TabIndex = 1;
             this.button2.Text = "Excell\'e Aktar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // frmRapor
             // 
