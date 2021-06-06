@@ -22,23 +22,26 @@ namespace diyetUygulamasi
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            int kontrol = diyetKontrol(txtDiyet.Text, cmbGunler.SelectedIndex);
-
-            if (kontrol == 1)
+            if (panelIslemleri.girdiKontrol(Application.OpenForms["diyetEkle"]))
             {
-                diyet diyet = new diyet(txtDiyet.Text, txtSabah.Text, txtOgle.Text, txtAksam.Text, cmbGunler.SelectedIndex);
-                db.diyetler.Add(diyet);
-            }
-            else if (kontrol == 2)
-            {
-                db.diyetler.Find(x => x.adi == txtDiyet.Text).diyetListe.Add(new diyetListesi(cmbGunler.SelectedIndex, txtSabah.Text, txtOgle.Text, txtAksam.Text));
-            }
+                int kontrol = diyetKontrol(txtDiyet.Text, cmbGunler.SelectedIndex);
 
-            db.diyetler.Find(x => x.adi == txtDiyet.Text).diyetListe.Sort(delegate (diyetListesi u1, diyetListesi u2) { return u1.diyetGunu.id.CompareTo(u2.diyetGunu.id); });
+                if (kontrol == 1)
+                {
+                    diyet diyet = new diyet(txtDiyet.Text, txtSabah.Text, txtOgle.Text, txtAksam.Text, cmbGunler.SelectedIndex);
+                    db.diyetler.Add(diyet);
+                }
+                else if (kontrol == 2)
+                {
+                    db.diyetler.Find(x => x.adi == txtDiyet.Text).diyetListe.Add(new diyetListesi(cmbGunler.SelectedIndex, txtSabah.Text, txtOgle.Text, txtAksam.Text));
+                }
 
-            txtSabah.Text = "";
-            txtOgle.Text = "";
-            txtAksam.Text = "";
+                db.diyetler.Find(x => x.adi == txtDiyet.Text).diyetListe.Sort(delegate (diyetListesi u1, diyetListesi u2) { return u1.diyetGunu.id.CompareTo(u2.diyetGunu.id); });
+
+                txtSabah.Text = "";
+                txtOgle.Text = "";
+                txtAksam.Text = "";
+            }
 
         }
 

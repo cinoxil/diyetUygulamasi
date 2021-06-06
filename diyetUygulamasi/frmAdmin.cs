@@ -14,7 +14,7 @@ namespace diyetUygulamasi
         public frmAdmin()
         {
             FormClosing += adminFormKapatma;
-            InitializeComponent(); 
+            InitializeComponent();
         }
 
         private void adminFormKapatma(object sender, FormClosingEventArgs e)
@@ -29,33 +29,25 @@ namespace diyetUygulamasi
         {
 
         }
-        
+
 
         private void btnOturumKapat_Click(object sender, EventArgs e)
         {
             db.serializeJSON();
             panelIslemleri.oturumuKapat();
         }
-            
+
 
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            db.admin.kisiEkle(new diyetisyen(txtTc.Text,txtAd.Text,txtSoyad.Text, txtId.Text, txtParola.Text));
-            panelIslemleri.formTemizle(Application.OpenForms["frmAdmin"]);
+            if (panelIslemleri.girdiKontrol(Application.OpenForms["frmAdmin"]))
+            {
+                db.admin.kisiEkle(new diyetisyen(txtTc.Text, txtAd.Text, txtSoyad.Text, txtId.Text, txtParola.Text));
+                panelIslemleri.formTemizle(Application.OpenForms["frmAdmin"]);
+            }
         }
 
-
-
-
-
-        //private void adminFormKapatma(object sender, FormClosingEventArgs e)
-        //{
-        //    //Açık formlardan adı Form1 olanı yakalıyor.
-        //    var anaForm = Application.OpenForms["Form1"];
-        //    //Anaformu kapatıyor.
-        //    if (anaForm != null) anaForm.Close();
-        //}
 
     }
 }

@@ -35,26 +35,26 @@ namespace diyetUygulamasi.database
         public static void deSerializeJSON()
         {
             var jsonVerisi = ""; //Null hatası vermemesi için boş default değer atıyor.
-            jsonVerisi = File.ReadAllText(@".\Diyetisyenler.json"); //Kullanicilar.json okuyup içindekileri jsonVerisi değişkenine atıyor.
+            jsonVerisi = File.ReadAllText(@".\Diyetisyenler.json"); //Diyetisyenler.json okuyup içindekileri jsonVerisi değişkenine atıyor.
             if (jsonVerisi != "")
             {
-                diyetisyenler = JsonConvert.DeserializeObject<List<diyetisyen>>(jsonVerisi);//jsonVerisini list kullanıcı tipine dönüştürüp kullancılar listesine atıyor.
+                diyetisyenler = JsonConvert.DeserializeObject<List<diyetisyen>>(jsonVerisi);//jsonVerisini list kullanıcı tipine dönüştürüp diyetisyenler listesine atıyor.
 
             }
 
             var hastalikJsonVerisi = ""; //Null hatası vermemesi için boş default değer atıyor.
-            hastalikJsonVerisi = File.ReadAllText(@".\Hastaliklar.json"); //Kullanicilar.json okuyup içindekileri jsonVerisi değişkenine atıyor.
+            hastalikJsonVerisi = File.ReadAllText(@".\Hastaliklar.json"); 
             if (hastalikJsonVerisi != "")
             {
-                hastaliklar = JsonConvert.DeserializeObject<List<hastalik>>(hastalikJsonVerisi);//jsonVerisini list kullanıcı tipine dönüştürüp kullancılar listesine atıyor.
+                hastaliklar = JsonConvert.DeserializeObject<List<hastalik>>(hastalikJsonVerisi);
 
             }
 
             var diyetJsonVerisi = ""; //Null hatası vermemesi için boş default değer atıyor.
-            diyetJsonVerisi = File.ReadAllText(@".\Diyetler.json"); //Kullanicilar.json okuyup içindekileri jsonVerisi değişkenine atıyor.
+            diyetJsonVerisi = File.ReadAllText(@".\Diyetler.json"); 
             if (diyetJsonVerisi != "")
             {
-                diyetler = JsonConvert.DeserializeObject<List<diyet>>(diyetJsonVerisi);//jsonVerisini list kullanıcı tipine dönüştürüp kullancılar listesine atıyor.
+                diyetler = JsonConvert.DeserializeObject<List<diyet>>(diyetJsonVerisi);
 
             }
         }

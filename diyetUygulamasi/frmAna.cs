@@ -51,13 +51,8 @@ namespace diyetUygulamasi
             db.diyetler.Add(diyet);
             diyet = new diyet("Yesillikler Dunyasi", "", "", "", 0);
             db.diyetler.Add(diyet);
+    
 
-
-
-            //diyetisyen diyetisyen = new diyetisyen("23587421548", "ugur", "adw", "ugur", "123");
-            //db.admin.kisiEkle(diyetisyen);
-
-        
         }
 
         private void btnOturumKapat_Click(object sender, EventArgs e)

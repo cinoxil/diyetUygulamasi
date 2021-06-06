@@ -1,5 +1,6 @@
 ﻿using diyetUygulamasi.database;
 using diyetUygulamasi.entities;
+using diyetUygulamasi.PanelIslemleri;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,10 +20,13 @@ namespace diyetUygulamasi
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            if (hastalikKontrol(txtHastalik.Text))
+            if (panelIslemleri.girdiKontrol(Application.OpenForms["hastalikEkle"]))
             {
-                hastalik hastalik = new hastalik(txtHastalik.Text);
-                db.hastaliklar.Add(hastalik);
+                if (hastalikKontrol(txtHastalik.Text))
+                {
+                    hastalik hastalik = new hastalik(txtHastalik.Text);
+                    db.hastaliklar.Add(hastalik);
+                }
             }
         }
 
@@ -38,7 +42,7 @@ namespace diyetUygulamasi
                 return true;
             }
 
-            
+
 
         }
     }

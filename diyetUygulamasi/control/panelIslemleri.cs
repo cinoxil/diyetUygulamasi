@@ -32,7 +32,7 @@ namespace diyetUygulamasi.PanelIslemleri
 
         #endregion
 
-       
+
 
         //Oturumu kapat butonuna tıklandığında hesaptan çıkış yapan fonksiyon.
         public static void oturumuKapat()
@@ -78,7 +78,7 @@ namespace diyetUygulamasi.PanelIslemleri
             var gbIslemliste = (GroupBox)solPanel.Controls["grpBoxIslemListe"];
             var lblId = (Label)solPanel.Controls["lblId"];
             lblId.Text = "";
-            
+
             //Grupboxın kontrollerine girip buttonları pasif hale getiriyor.
             foreach (Control item in gbIslemliste.Controls)
             {
@@ -135,7 +135,7 @@ namespace diyetUygulamasi.PanelIslemleri
 
         #endregion
 
-        #region frmKayitOl Panel İşlemleri
+        #region Form kortrol islemleri
 
         //Kayıtol kısmında eksik veri girişi olup olamdığını kontrol eden fonksiyon.
         public static bool girdiKontrol(Form form)
@@ -147,29 +147,45 @@ namespace diyetUygulamasi.PanelIslemleri
                 if (string.IsNullOrEmpty(txt.Text))
                 {
                     kontrol = false;
+                    MessageBox.Show("Lütfen tüm alanları eksiksiz giriniz!");
+                    break;
+                }
+            foreach (var cmBox in form.Controls.OfType<ComboBox>())
+                //Eğer texbox boş değil ise comboboxı temizliyor.
+                if (string.IsNullOrEmpty(cmBox.Text))
+                {
+                    kontrol = false;
+                    MessageBox.Show("Lütfen tüm alanları eksiksiz giriniz!");
                     break;
                 }
 
             return kontrol;
         }
 
-        //Kayıt ol formunda eksik veri girişi yoksa kullanıcı kayıt eden varsa hata verdiren fonksiyon.
-        //public static void kullaniciKayit(string id, string sifre, string ad, string soyad, string tc, string telefon,string mail, string adres)
-        //{
-        //    var kayitForm = Application.OpenForms["frmKayitOl"]; //Açık formlar içerisinden frmkayitOl isimli formu yakalar.
-        //    //Texbox kontrolü için kayıt formunu girdi kontrol mothoduna göreriyor eğer true dönerse içeri giriyor.
-        //    if (girdiKontrol(kayitForm))
-        //    {
-        //        var yeniKullanici =
-        //            new kullanici(id, sifre, ad, soyad, tc, telefon, mail, ad); //Kullanıcıyı örnekliyor.
-        //        //Eğer yenikullanıcı içindeki kayıtalınabilir true ise otorumu kapat fonksiyonunu çalıştırıyor.
-        //        if (yeniKullanici.kayitAlinabilir) oturumuKapat();
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Lütfen eksik veri girişi yapmayın");
-        //    }
-        //}
+
+        public static bool girdiKontrol(GroupBox gb)
+        {
+            var kontrol = true;
+            //Fonksiyona gelen form değişkeni içindeki kontrollerde texboxlar üzerinde dönüyor.
+            foreach (var txt in gb.Controls.OfType<TextBox>())
+                //Eğer texbox boş ise kontrol değişkenini false yapıyor ve dögüden çıkıyor.
+                if (string.IsNullOrEmpty(txt.Text))
+                {
+                    kontrol = false;
+                    MessageBox.Show("Lütfen tüm alanları eksiksiz giriniz!");
+                    break;
+                }
+            foreach (var cmBox in gb.Controls.OfType<ComboBox>())
+                //Eğer texbox boş değil ise comboboxı temizliyor.
+                if (string.IsNullOrEmpty(cmBox.Text))
+                {
+                    kontrol = false;
+                    MessageBox.Show("Lütfen tüm alanları eksiksiz giriniz!");
+                    break;
+                }
+
+            return kontrol;
+        }
 
         #endregion
     }

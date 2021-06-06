@@ -68,11 +68,11 @@ namespace diyetUygulamasi
                 {
                     for (int j = 1; j < 4; j++)
                     {
-                        if (j == 0)
+                        if (j == 1)
                         {
                             dg.Rows[i].Cells[j].Value = hasta.diyet.diyetListe.Where(x => x.diyetGunu.id == i).FirstOrDefault().diyetGunu.sabah;
                         }
-                        else if (j == 1)
+                        else if (j == 2)
                         {
                             dg.Rows[i].Cells[j].Value = hasta.diyet.diyetListe.Where(x => x.diyetGunu.id == i).FirstOrDefault().diyetGunu.oglen;
                         }
@@ -114,7 +114,6 @@ namespace diyetUygulamasi
                 worksheet.Cells[4, 2] = hasta.hastalik.adi;
                 worksheet.Cells[5, 1] = "diyet";
                 worksheet.Cells[5, 2] = hasta.diyet.adi;
-                worksheet.Columns.ColumnWidth = 12;
                 for (int i = 1; i < dgDiyet.Columns.Count + 1; i++)
                 {
                     worksheet.Cells[9, i] = dgDiyet.Columns[i - 1].HeaderText;
@@ -135,3 +134,16 @@ namespace diyetUygulamasi
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

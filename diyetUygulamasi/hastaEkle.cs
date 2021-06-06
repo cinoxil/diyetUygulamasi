@@ -16,14 +16,20 @@ namespace diyetUygulamasi
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            hasta hasta = new hasta(txtTc.Text, txtAd.Text, txtSoyad.Text);
-            diyetisyenFacade.hastaEkle(hasta);
-            
+            Form form = Application.OpenForms["hastaEkle"];
+            GroupBox gb = (GroupBox)form.Controls["gbHastaTxt"];
+            if (panelIslemleri.girdiKontrol(gb))
+            {
+                hasta hasta = new hasta(txtTc.Text, txtAd.Text, txtSoyad.Text);
+                diyetisyenFacade.hastaEkle(hasta);
 
-            Form acikForm = Application.OpenForms["hastaEkle"];
-            GroupBox gbHastaEkle = (GroupBox)acikForm.Controls["gbHastaTxt"];
 
-            panelIslemleri.formTemizle(gbHastaEkle);
+                Form acikForm = Application.OpenForms["hastaEkle"];
+                GroupBox gbHastaEkle = (GroupBox)acikForm.Controls["gbHastaTxt"];
+
+                panelIslemleri.formTemizle(gbHastaEkle);
+            }
         }
+
     }
 }

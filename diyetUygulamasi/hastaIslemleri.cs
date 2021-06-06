@@ -1,8 +1,11 @@
 ﻿using diyetUygulamasi.control;
 using diyetUygulamasi.database;
 using diyetUygulamasi.entities;
+using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -14,16 +17,6 @@ namespace diyetUygulamasi
         public hastaIslemleri()
         {
             InitializeComponent();
-        }
-
-        private void btnEkle_Click(object sender, EventArgs e)
-        {
-            ////paraMiktar boş mu ve textBoxSayiControl sayı mı diye kontrol ediyor.
-            //if (!string.IsNullOrEmpty(txtParaMiktar.Text) && textBoxSayiControl())
-            //    new paraIstek(int.Parse(txtParaMiktar.Text),cmb_paraBirimi.Text);
-            ////Eğer değilse hata veriyor.
-            //else
-            //    MessageBox.Show("Lütfen eklemek istediğiniz miktarı giriniz");
         }
 
         private void hastaIslemleri_Load(object sender, EventArgs e)
@@ -40,21 +33,48 @@ namespace diyetUygulamasi
 
             hastalariListele(dgHastalar);
 
+            for (int i = 0; i < db.hastaliklar.Count; i++)
+            {
+                hastalik kontrol = db.hastaliklar[i];
+
+                for (int j = 0; j < db.hastaliklar.Count; j++)
+                {
+                    if (j != i)
+                    {
+                        if (kontrol.adi == db.hastaliklar[j].adi)
+                        {
+                            db.hastaliklar.RemoveAt(j);
+                        }
+
+                    }
+
+                }
+
+            }
+
+            for (int i = 0; i < db.diyetler.Count; i++)
+            {
+                diyet kontrol = db.diyetler[i];
+
+                for (int j = 0; j < db.diyetler.Count; j++)
+                {
+                    if (j != i)
+                    {
+                        if (kontrol.adi == db.diyetler[j].adi)
+                        {
+                            db.diyetler.RemoveAt(j);
+                        }
+
+                    }
+
+                }
+
+            }
+
             cmbHastaliklar.DataSource = db.hastaliklar;
             cmbDiyetler.DataSource = db.diyetler;
 
         }
-
-        //ParaMiktar sayı mı diye kontrol ediyor.
-        //private bool textBoxSayiControl()
-        //{
-        //    //txtParaMiktar texboxu sayı mı diye bakıyor ve sayı ise txtKontrol değişkenine true yazıyor.
-        //    var txtKontrol = txtParaMiktar.Text.All(char.IsDigit);
-        //    //Eğer sayı değilse hata veriyor.
-        //    if (!txtKontrol) MessageBox.Show("Lütfen sayısal değer giriniz");
-
-        //    return txtKontrol;
-        //}
 
         public static void hastalariListele(DataGridView dg)
         {
@@ -91,9 +111,23 @@ namespace diyetUygulamasi
             hastalariListele(dgHastalar);
         }
 
-        private void btnRaporAl_Click(object sender, EventArgs e)
+        private void btnRaporAl1_Click(object sender, EventArgs e)
         {
-            hasta hasta = kullaniciKontrol.gecerliDiyetisyen.hastalar.Where(x => x.tc == hastaTc).FirstOrDefault();
+            List<diyetisyen> diyetisyenler = new List<diyetisyen>();
+            var jsonVerisi = ""; //Null hatası vermemesi için boş default değer atıyor.
+            jsonVerisi = File.ReadAllText(@".\Diyetisyenler.json"); //Kullanicilar.json okuyup içindekileri jsonVerisi değişkenine atıyor.
+
+            if (jsonVerisi != "")
+            {
+                diyetisyenler = JsonConvert.DeserializeObject<List<diyetisyen>>(jsonVerisi);//jsonVerisini list kullanıcı tipine dönüştürüp kullancılar listesine atıyor.
+
+
+            }
+
+            hasta hasta = (diyetisyenler.Where(x => x.kullaniciAdi == kullaniciKontrol.gecerliDiyetisyen.kullaniciAdi).FirstOrDefault()
+                    .hastalar.Where(a => a.tc == hastaTc).FirstOrDefault());
+
+
             reportClass.hasta = hasta;
 
             var rapor = new frmRapor();
@@ -105,11 +139,22 @@ namespace diyetUygulamasi
 
         }
 
+        private void btnRaporAl2_Click(object sender, EventArgs e)
+        {
+            hasta hasta = kullaniciKontrol.gecerliDiyetisyen.hastalar.Where(x => x.tc == hastaTc).FirstOrDefault();
+            reportClass.hasta = hasta;
 
+            var rapor = new frmRapor();
+            GroupBox gbKisisel = (GroupBox)rapor.Controls["gbKisisel"];
+            GroupBox gbDiyet = (GroupBox)rapor.Controls["gbDiyet"];
 
+            gbKisisel.Location = new Point(12, 367);
+            gbDiyet.Location = new Point(12, 12);
 
-
-
-
+            rapor.hasta = hasta;
+            rapor.StartPosition = FormStartPosition.Manual;
+            rapor.Location = new Point(330, 120);
+            rapor.Show();
+        }
     }
 }
